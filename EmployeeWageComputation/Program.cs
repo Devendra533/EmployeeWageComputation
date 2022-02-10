@@ -3,5 +3,7 @@ using EmployeeWageComputation;
 
 
 Console.WriteLine("Employee WAge Computation");
-EmployeeOperation.GetAttendance();
+EmployeeOperation emp = new EmployeeOperation();
+emp.GetAttendance(); 
+emp.EmpWage();
 Console.ReadKey();
