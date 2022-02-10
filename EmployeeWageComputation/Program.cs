@@ -4,6 +4,6 @@ using EmployeeWageComputation;
 
 Console.WriteLine("Employee WAge Computation");
 EmployeeOperation emp = new EmployeeOperation();
-emp.GetAttendance(); 
-emp.EmpWage();
+//emp.EmpWage();
+emp.EmpPartTimeWage();
 Console.ReadKey();
