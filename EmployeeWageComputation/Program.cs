@@ -7,4 +7,5 @@ EmployeeOperation emp = new EmployeeOperation();
 emp.GetAttendance();
 emp.EmpWage();
 emp.EmpPartTimeWage();
+emp.EmpMonthlyWage();
 Console.ReadKey();

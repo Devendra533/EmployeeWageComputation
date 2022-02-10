@@ -11,9 +11,11 @@ namespace EmployeeWageComputation
        private const int IS_FULL_TIME = 1;
        private const int IS_PART_TIME = 2;
        private const  int EMP_RATE_PER_HOUR = 20;
+       private const int NUM_OF_WORKING_DAY = 2;
 
-       private int empHrs = 0;
+        private int empHrs = 0;
         private int empWage = 0;
+        private int totalEmpWage = 0;
 
         Random random = new Random();
         
@@ -56,6 +58,34 @@ namespace EmployeeWageComputation
             Console.WriteLine("Emp Wage: " + empWage);
             Console.ReadKey();
         }
+ 
+        
+        public void EmpMonthlyWage()
+        { 
+            
+            for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
+            { 
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
+                {
+                    case IS_FULL_TIME:
+                        empHrs = 8;
+                        break;
+                    case IS_PART_TIME:
+                        empHrs = 4;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                totalEmpWage += empWage;
+                Console.WriteLine("Emp Wage: " + empWage);
+                Console.WriteLine("Total Emp Wage: " + totalEmpWage);
+                Console.ReadKey ();
+            }
+        }
+
 
     }
 }
