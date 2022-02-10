@@ -8,4 +8,5 @@ emp.GetAttendance();
 emp.EmpWage();
 emp.EmpPartTimeWage();
 emp.EmpMonthlyWage();
+emp.EmpMonthlyWageCondition();
 Console.ReadKey();
